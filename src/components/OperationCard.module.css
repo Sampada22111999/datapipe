@@ -1,0 +1,99 @@
+.card {
+  background: var(--op-bg, var(--bg-elevated));
+  border: 1px solid var(--op-border, var(--border-default));
+  border-radius: var(--radius-md);
+  margin: 6px 10px;
+  overflow: hidden;
+  transition: opacity var(--transition), border-color var(--transition);
+}
+
+.card.disabled {
+  opacity: 0.45;
+}
+
+/* ── Header row ───────────────────────────────────────────────────────────── */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.header:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.checkbox {
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: var(--accent);
+  width: 13px;
+  height: 13px;
+}
+
+.typeBadge {
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--op-text, var(--text-secondary));
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--op-border, var(--border-default));
+  border-radius: var(--radius-sm);
+  padding: 1px 7px;
+}
+
+.opLabel {
+  flex: 1;
+  font-size: 11px;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.noLabel {
+  color: var(--text-disabled);
+  font-style: italic;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.chevron {
+  font-size: 9px;
+  color: var(--text-disabled);
+}
+
+.deleteBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-disabled);
+  font-size: 11px;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: var(--radius-sm);
+  line-height: 1;
+  transition: color var(--transition), background var(--transition);
+}
+
+.deleteBtn:hover {
+  color: var(--red);
+  background: var(--red-dim);
+}
+
+/* ── Expanded body ────────────────────────────────────────────────────────── */
+
+.body {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 10px 12px 12px;
+}

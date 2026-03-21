@@ -1,0 +1,84 @@
+.empty {
+  padding: 12px 14px;
+  font-size: 11px;
+  color: var(--text-disabled);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px 8px;
+}
+
+/* ── Entry ────────────────────────────────────────────────────────────────── */
+
+.entry {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 7px 10px;
+}
+
+.entry.entryError {
+  background: var(--red-dim);
+  border-color: var(--red-border);
+}
+
+.entryHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.typeBadge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--op-text);
+  background: var(--op-bg);
+  border: 1px solid var(--op-border);
+  border-radius: var(--radius-sm);
+  padding: 1px 6px;
+  flex-shrink: 0;
+}
+
+.entryLabel {
+  font-size: 11px;
+  color: var(--text-secondary);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.entryDuration {
+  font-size: 10px;
+  color: var(--text-disabled);
+  flex-shrink: 0;
+}
+
+.entryDetail {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  word-break: break-all;
+}
+
+.entryError .entryDetail {
+  color: var(--red);
+}
+
+.entryRows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 10px;
+  color: var(--text-disabled);
+}
+
+.deltaNeg { color: var(--red); }
+.deltaPos { color: var(--green); }

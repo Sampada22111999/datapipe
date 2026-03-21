@@ -1,0 +1,99 @@
+.empty {
+  padding: 12px 14px;
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.empty strong {
+  color: var(--cyan);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 6px 8px;
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-elevated);
+  cursor: pointer;
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+}
+
+.tableRow:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-default);
+}
+
+.tableRow.selected {
+  background: var(--cyan-dim);
+  border-color: #0d4540;
+}
+
+.tableIcon {
+  font-size: 16px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.selected .tableIcon {
+  color: var(--cyan);
+}
+
+.tableInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.tableName {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selected .tableName {
+  color: var(--cyan);
+}
+
+.tableMeta {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 2px;
+  display: flex;
+  gap: 8px;
+}
+
+.tableTime {
+  color: var(--text-disabled);
+}
+
+.dropBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-disabled);
+  font-size: 11px;
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  transition: color var(--transition), background var(--transition);
+}
+
+.dropBtn:hover {
+  color: var(--red);
+  background: var(--red-dim);
+}

@@ -1,0 +1,84 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 20px;
+  height: 46px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  flex-shrink: 0;
+}
+
+/* ── Logo ─────────────────────────────────────────────────────────────────── */
+
+.logoGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px rgba(77, 142, 248, 0.6);
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.versionBadge {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 2px 8px;
+}
+
+/* ── Spacer ───────────────────────────────────────────────────────────────── */
+
+.spacer {
+  flex: 1;
+}
+
+/* ── Status message ───────────────────────────────────────────────────────── */
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  max-width: 420px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.statusIcon {
+  flex-shrink: 0;
+  font-size: 13px;
+}
+
+.status_ok      { color: var(--green); }
+.status_error   { color: var(--red); }
+.status_loading { color: var(--yellow); }
+
+@keyframes spin {
+  from { display: inline-block; transform: rotate(0deg); }
+  to   { display: inline-block; transform: rotate(360deg); }
+}
+
+.status_loading .statusIcon {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
